@@ -1,54 +1,40 @@
 # Practice: Inheritance
 
-**Inheritance** is a mechanism that passes traits of a parent class to its
-descendants, which helps prevents duplication of code. In this exercise, you
-will be implementing two classes that demonstrate class inheritance in
-JavaScript.
+This project is part of the App Academy Open curriculum, where I explored and
+practiced class **inheritance** in JavaScript. The exercise focuses on creating child
+classes for a `Person` parent class, demonstrating how traits can be inherited to
+prevent code duplication.
 
-## Set up
+## Project Structure
 
-Clone the starter from the **Download** link at the bottom of this page.
+- **`classes/person.js`**: Parent class that defines basic information about a person.
+- **`classes/student.js`**: Child class for representing students, inheriting from the `Person` class.
+- **`classes/teacher.js`**: Child class for representing teachers, inheriting from the `Person` class.
 
-## Directions
+## Features
 
-Create the following child classes for the parent class of `Person`.
+### Student Class
 
-### `Student` class
+- Inherits from the `Person` class.
+- Additional attributes: `major` and `GPA`.
+- Static method: `compareGPA(student1, student2)` compares GPAs and returns a string indicating the higher GPA.
 
-Implement the following in the __classes/student.js__ file.
+### Teacher Class
 
-1. Create a new `Student` class and have its `constructor` call the `super()`,
-   passing the parameters needed for a `Person` and a `constructor` function
-   that takes in additional parameters for their `major` subject and `GPA`.
-   Check the specs to determine which parameters you need to inherit.
-2. Create a static method called `compareGPA` which will take in two `Student`
-   instances as the first and second parameter and return a string comparing
-   the `GPA`s return "`<firstName>` `<lastName>` has the higher GPA." If they're
-   equal, return "Both students have the same GPA."
+- Inherits from the `Person` class.
+- Additional attributes: `subject` and `yearsOfExperience`.
+- Static method: `combinedYearsOfExperience(teachers)` calculates the total years of experience for an array of teachers.
 
-Run the test specs in the __test/student-spec.js__ file to test that you
-have created the `Student` class correctly:
+## Getting Started
 
-```shell
-npm test test/student-spec.js
-```
+1. **Clone the repository.**
+   ```bash
+   git clone https://github.com/your-username/class-inheritance-exercise.git
 
-### `Teacher` class
+2. Navigate to the project directory.
+   ```bash
+   npm test test/student-spec.js
 
-Implement the following in the __classes/teacher.js__ file.
-
-1. Create a new `Teacher` class and have its `constructor` call the `super()`,
-   passing parameters needed for a `Person` and a `constructor` function that
-   takes in additional parameters for the `subject` they teach and their
-   `yearsOfExperience`. Check the specs to determine which parameters you need
-   to inherit.
-2. Create a static method called `combinedYearsOfExperience` that takes in an
-   array of `Teacher` instances, `teachers`, as a parameter and returns the sum
-   of the `yearsOfExperience` of all `teachers`.
-
-Run the test specs in the __test/teacher-spec.js__ file to test that you
-have created the `Teacher` class correctly:
-
-```shell
-npm test test/teacher-spec.js
-```
+3. Explore the code and run test specs.
+   ```bash
+   npm test
